@@ -1,10 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.42181c93.js",
+    "main.js": "/static/js/main.531b5c0c.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
-    "static/media/planner.png": "/static/media/planner.f8b11911f1a7062abe9d.png",
-    "static/media/drone.png": "/static/media/drone.b6324aa1748d561a3857.png",
     "static/media/merinavi.png": "/static/media/merinavi.08fc54d2995578499cc8.png",
     "static/media/swift.png": "/static/media/swift.cb519e058df5425e49e7.png",
     "static/media/me.png": "/static/media/me.d63ccb242e6da3db7dec.png",
@@ -16,15 +14,17 @@
     "static/media/stats.png": "/static/media/stats.101e33c76a32e2573db8.png",
     "static/media/awos.png": "/static/media/awos.1f77289b5322755e40b9.png",
     "static/media/rcr-generator.png": "/static/media/rcr-generator.7f949e6ea3685fabf94f.png",
-    "static/media/poster.png": "/static/media/poster.2a0eaf0f99052580165e.png",
     "static/media/svg.png": "/static/media/svg.17b5baf2841a2d26c550.png",
+    "static/media/drone.jpg": "/static/media/drone.43e5cc1bc70b11fb7548.jpg",
+    "static/media/waypoint.jpg": "/static/media/waypoint.25050e1322cc91c604e4.jpg",
+    "static/media/planner.jpg": "/static/media/planner.02230df5b12ceeac889c.jpg",
     "index.html": "/index.html",
     "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.42181c93.js.map": "/static/js/main.42181c93.js.map",
+    "main.531b5c0c.js.map": "/static/js/main.531b5c0c.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.42181c93.js"
+    "static/js/main.531b5c0c.js"
   ]
 }
