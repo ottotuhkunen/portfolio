@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
-import selfie from './images/me.png';
+import fssImage from './images/fss.png';
 
 const AboutSection = styled.section`
   color: ${({ theme }) => theme.text};
@@ -38,10 +37,9 @@ const AboutSection = styled.section`
     }
   }
 
-  .about-image {
+  .banner-image {
     flex: 1;
     text-align: center;
-    margin-bottom: 30px;
 
     @media(min-width: 768px) {
       margin-bottom: 0;
@@ -51,9 +49,8 @@ const AboutSection = styled.section`
 
     img {
       width: 100%;
-      max-width: 300px;
+      max-width: 540px;
       height: auto;
-      border-radius: 50%;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
   }
@@ -61,38 +58,22 @@ const AboutSection = styled.section`
 
 const About = ({ theme }) => {
   const [key, setKey] = useState(0);
-
-  // Reset image animation on theme change
   useEffect(() => {
     setKey(prevKey => prevKey + 1);
   }, [theme]);
 
   return (
     <AboutSection id="about">
-      <motion.div
-        className="about-image"
-        key={`image-${key}`} // Reset animation on theme change
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }} // Slow fade-in
-      >
-        <img src={selfie} alt="Otto Tuhkunen" />
-      </motion.div>
+      <div className="banner-image">
+        <img src={fssImage} alt="Event banner" />
+      </div>
       <div className="about-content">
-        <h2>About Me</h2>
         <p>
-          I am a passionate developer specializing in web apps, especially those using React and map-based tools such as Leaflet and Mapbox.
+        VATSIM Scandinavia invites you to take part in a journey to the home of the original Santa Claus, just in time for the Christmas holiday.
         </p>
         <p>
-          The aviation industry is close to my heart which is why many of my non-profit projects are related to flight operations or Air Traffic Services.
+        Fly and See Santa, the largest annual Christmas event in VATSIM skies, takes place at three airports in the northernmost reaches of Europe. Experience the magic of snow-covered landscapes and icy runways as you arrive at Rovaniemi, Tromsø, and Kiruna—airports nestled in the stunning wilderness of northern Europe. Throughout December, the airspace buzzes with flights full of passengers eager to visit Santa's winter wonderland. We hope you’ll join us for this unforgettable event!
         </p>
-        <p>
-          I enjoy designing and developing modern User Interfaces, and thus I have gained experience mostly in frontend development.
-        </p>
-        <p>
-          I am about to finish my <em>Business Information Technologies</em> studies at Tampere University of Applied Siences.
-        </p>
-        <p>Enjoy! 😊</p>
       </div>
     </AboutSection>
   );

@@ -4,8 +4,11 @@ import { lightTheme, darkTheme } from './theme';
 import { GlobalStyles } from './GlobalStyles';
 import Header from './components/Header';
 import About from './components/About';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
+import Airports from './components/Airports';
+import Routes from './components/Routes';
+import Sceneries from './components/Sceneries';
+import Live from './components/Live';
+import Notes from './components/Notes';
 import Contact from './components/Contact';
 import ThemeToggle from './components/ThemeToggle';
 
@@ -57,10 +60,19 @@ function App() {
           <About />
         </div>
         <div ref={addToRefs}>
-          <Projects />
+          <Airports />
         </div>
         <div ref={addToRefs}>
-          <Skills />
+          <Routes />
+        </div>
+        <div ref={addToRefs}>
+          <Notes />
+        </div>
+        <div ref={addToRefs}>
+          <Sceneries />
+        </div>
+        <div ref={addToRefs}>
+          <Live />
         </div>
         <div ref={addToRefs}>
           <Contact />

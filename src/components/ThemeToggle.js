@@ -1,9 +1,7 @@
-// src/components/ThemeToggle.js
 import React, { useState, useEffect } from 'react';
 import { FiSun, FiMoon } from 'react-icons/fi';
 import styled, { keyframes, css } from 'styled-components';
 
-// Keyframe animation for a smooth and funky rotation
 const rotate = keyframes`
   0% {
     transform: rotate(0deg);
@@ -38,13 +36,12 @@ const ToggleContainer = styled.div`
   right: 20px;
   cursor: pointer;
   font-size: 26px;
-  color: black;
+  color: ${({ theme }) => theme.body};
   display: flex;
   align-items: center;
   justify-content: center;
   transition: color 0.3s ease;
-
-  background-color: rgba(255, 204, 0, 1);
+  background-color: ${({ theme }) => theme.titleText};
   backdrop-filter: blur(6px);
   border-radius: 50%;
   padding: 10px;
@@ -60,8 +57,6 @@ const ToggleContainer = styled.div`
   }
 
   &:hover {
-    background-color: rgba(255, 204, 0, 1);
-    color: black;
     animation: ${wobble} 1s ease-in-out;
   }
 `;

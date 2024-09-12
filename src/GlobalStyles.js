@@ -1,4 +1,3 @@
-// src/GlobalStyles.js
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
@@ -19,7 +18,7 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.defaultBackground};
     background-size: 400% 400%;
     color: ${({ theme }) => theme.text};
-    animation: gradientAnimation 15s ease infinite; /* Smooth and slow animation */
+    animation: gradientAnimation 15s ease infinite;
     scroll-behavior: smooth;
     overflow-x: hidden;
     position: relative;
@@ -31,7 +30,21 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  a {
+    color: ${({ theme }) => theme.linkColor};
+    text-decoration: none;
+  }
+  
+  a:hover, a:focus {
+    color: ${({ theme }) => theme.linkHoverColor};
+    text-decoration: underline;
   }
 
   button {
@@ -77,10 +90,9 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0 auto;
   }
 
-  /* Add specific styles for the "Projects" section */
   .projects-section {
     background: ${({ theme }) => theme.sectionThreeBackground};
     background-size: 400% 400%;
-    animation: gradientAnimation 20s ease infinite; /* Slower, more subtle gradient animation */
+    animation: gradientAnimation 20s ease infinite;
   }
 `;

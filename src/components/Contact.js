@@ -1,8 +1,6 @@
-// src/components/Contact.js
 import React, { useState } from 'react';
-import styled, { keyframes } from 'styled-components';
-import { FaDiscord, FaLinkedin, FaGithub, FaEnvelope, FaLink } from 'react-icons/fa';
-import { color } from 'framer-motion';
+import styled, { keyframes, useTheme } from 'styled-components';
+import { FaDiscord, FaGlobe, FaComment, FaLink, FaTwitch } from 'react-icons/fa';
 
 // Keyframes for wobble effect
 const wobble = keyframes`
@@ -29,16 +27,16 @@ const ContactSection = styled.section`
 const IconContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 20px; /* Space between icons */
+  gap: 28px;
   margin-top: 20px;
 `;
 
 const IconWrapper = styled.a`
   color: ${({ theme }) => theme.iconColor};
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   transition: color 0.3s ease-in-out;
   cursor: pointer;
-  line-height:0;
+  line-height: 0;
 
   &:hover {
     animation: ${wobble} 1s ease-in-out;
@@ -50,10 +48,18 @@ const InfoText = styled.p`
   font-size: 1rem;
   color: ${({ theme }) => theme.text};
   margin-top: 20px;
-  height:20px;
+  height: 20px;
+`;
+
+const LogoImage = styled.img`
+  width: 100%;
+  max-width: 200px;
+  height: auto;
 `;
 
 const Contact = () => {
+  const theme = useTheme();
+
   const [hoveredIcon, setHoveredIcon] = useState('');
 
   const handleMouseEnter = (mediaName) => {
@@ -70,11 +76,19 @@ const Contact = () => {
 
   return (
     <ContactSection id="contact">
-      <h2>Contact Me! 😉</h2>
-      <p>You can reach me by sending a message in one of the medias listed below.</p>
+      <LogoImage src={theme.logoImage} alt="VATSIM Scandinavia" />
       <IconContainer>
         <IconWrapper
-          href="https://discord.com/users/277722172393259009"
+          href="https://vatsim-scandinavia.org/"
+          target="_blank"
+          aria-label="Website"
+          onMouseEnter={() => handleMouseEnter('Website')}
+          onMouseLeave={handleMouseLeave}
+        >
+          <FaGlobe />
+        </IconWrapper>
+        <IconWrapper
+          href="http://discord.vatsim-scandinavia.org/"
           target="_blank"
           aria-label="Discord"
           onMouseEnter={() => handleMouseEnter('Discord')}
@@ -83,35 +97,26 @@ const Contact = () => {
           <FaDiscord />
         </IconWrapper>
         <IconWrapper
-          href="https://www.linkedin.com/in/ottotuhkunen/"
+          href="https://www.twitch.tv/vatsimscandinavia"
           target="_blank"
-          aria-label="LinkedIn"
-          onMouseEnter={() => handleMouseEnter('LinkedIn')}
+          aria-label="Twitch"
+          onMouseEnter={() => handleMouseEnter('Twitch')}
           onMouseLeave={handleMouseLeave}
         >
-          <FaLinkedin />
+          <FaTwitch />
         </IconWrapper>
         <IconWrapper
-          href="https://github.com/ottotuhkunen"
+          href="https://cc.vatsim-scandinavia.org/feedback"
           target="_blank"
-          aria-label="GitHub"
-          onMouseEnter={() => handleMouseEnter('GitHub')}
+          aria-label="Feedback"
+          onMouseEnter={() => handleMouseEnter('Leave us Feedback')}
           onMouseLeave={handleMouseLeave}
         >
-          <FaGithub />
-        </IconWrapper>
-        <IconWrapper
-          href="mailto:otto.tuhkunen@hotmail.com"
-          aria-label="Email"
-          onMouseEnter={() => handleMouseEnter('Email')}
-          onMouseLeave={handleMouseLeave}
-        >
-          <FaEnvelope />
+          <FaComment />
         </IconWrapper>
       </IconContainer>
-      <InfoText>
-        {hoveredIcon}</InfoText>
-      <p style={{ marginTop: '20px' }}>© Otto Tuhkunen 2024</p>
+
+      <InfoText>{hoveredIcon}</InfoText>
     </ContactSection>
   );
 };

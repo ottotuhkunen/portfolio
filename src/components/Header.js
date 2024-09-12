@@ -10,6 +10,7 @@ const HeroSection = styled.section`
   background-position: center;
   background-repeat: no-repeat;
   background-color: ${({ theme }) => theme.headerBackground};
+  user-select: none;
 `;
 
 const Title = styled(motion.h1)`
@@ -40,7 +41,7 @@ const Header = ({ theme }) => {
         animate={{ y: 0 }}
         transition={{ type: 'spring', stiffness: 120 }}
       >
-        Otto Tuhkunen
+        Fly and See Santa 2024
       </Title>
       <Subtitle
         key={`subtitle-${key}`}
@@ -48,7 +49,7 @@ const Header = ({ theme }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
       >
-        Web App Developer | React | Map-based Apps | Aviation Tools
+        9th December 17:00z - 23:00z
       </Subtitle>
     </HeroSection>
   );
