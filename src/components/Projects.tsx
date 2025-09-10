@@ -109,10 +109,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-950 text-white"
-    >
+    <section id="projects" className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-950 text-white">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-yellow-300">
           M y &ensp;P r o j e c t s
