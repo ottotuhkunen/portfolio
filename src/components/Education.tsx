@@ -21,9 +21,8 @@ export default function Education() {
     <section id="education" className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-950 text-white">
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-yellow-300">
-          Education
+          E d u c a t i o n
         </h2>
-
         <div className="grid gap-8 md:grid-cols-2">
           {education.map((item, idx) => (
             <motion.div
