@@ -25,18 +25,18 @@ export default function Hero() {
           Hi, I’m <span className="bg-clip-text text-transparent text-yellow-300">Otto</span>
         </h1>
         <p className="text-lg text-gray-300 mb-6">
-          I am a passionate developer with a focus on modern web applications, particularly those
-          utilizing <b>React</b> and map-based tools like <b>Leaflet</b> and <b>Mapbox</b>. I also
-          have experience with <b>Node.js</b> for backend development and handling SQL requests to{' '}
-          <b>PostgreSQL</b>. Many of my projects are published on Heroku.
+          I am a passionate full-stack developer interested in developing modern web and mobile
+          applications. On the backend, I have experience with Node.js, designing APIs, and managing
+          SQL queries in PostgreSQL. Many of my projects are deployed and maintained on Heroku.
+          Additionally, I have professional experience working with React Native to create
+          cross-platform mobile applications and Firebase for real-time databases, authentication,
+          and cloud functions.
         </p>
         <p className="text-lg text-gray-300 mb-6">
-          The aviation industry holds a special place in my heart, which is why many of my
-          non-profit projects are related to flight operations and Air Traffic Services.
-        </p>
-        <p className="text-lg text-gray-300 mb-10">
           I have a strong interest in designing and developing modern User Interfaces, which has led
-          me to gain significant experience in frontend development.
+          me to gain significant experience in frontend development. The aviation industry holds a
+          special place in my heart, which is why many of my non-profit projects are related to
+          flight operations and Air Traffic Services.
         </p>
 
         <div className="flex flex-wrap gap-6 gap-y-3">

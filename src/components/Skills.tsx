@@ -36,7 +36,7 @@ export default function Skills() {
     <section id="skills" className="py-20 bg-gradient-to-br from-blue-950 to-black text-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-yellow-300">S k i l l s</h2>
-        <h3 className="text-3xl md:text-2xl font-bold mt-10 mb-6">Programming</h3>
+        <h3 className="text-2xl font-bold mt-10 mb-6">Programming</h3>
         <div className="flex flex-wrap justify-center gap-4">
           {skills.map(skill => (
             <span
@@ -47,7 +47,7 @@ export default function Skills() {
             </span>
           ))}
         </div>
-        <h3 className="text-3xl md:text-2xl font-bold mt-12 mb-6">Design & User Experience</h3>
+        <h3 className="text-2xl font-bold mt-12 mb-6">Design & User Experience</h3>
 
         <div className="flex flex-wrap justify-center gap-4">
           {designSkills.map(skill => (
@@ -83,7 +83,7 @@ export default function Skills() {
           ))}
         </div>
 
-        <h3 className="text-3xl md:text-2xl font-bold mt-12 mb-6">Video Projects</h3>
+        <h3 className="text-2xl font-bold mt-12 mb-6">Video Tutorials</h3>
         <p className="mb-8 text-lg text-white/70">
           I led a project at Tampere University of Applied Sciences focused on creating video
           tutorials for teaching drone operations. We produced 10 detailed videos in both Finnish

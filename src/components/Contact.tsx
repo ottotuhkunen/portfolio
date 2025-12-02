@@ -1,17 +1,19 @@
-import { FaEnvelope, FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaDiscord } from 'react-icons/fa';
 
 export default function Contact() {
   const iconClasses =
-    "text-3xl md:text-4xl transition-transform transform hover:scale-110 hover:text-yellow-300";
+    'text-3xl transition-transform transform hover:scale-106 hover:text-yellow-300';
+
+  const currentYear = new Date().getFullYear();
 
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-r from-purple-700 via-pink-600 to-yellow-500 text-white text-center"
+      className="py-20 bg-gradient-to-r from-purple-900 via-pink-700 to-yellow-700 text-white text-center"
     >
       <h2 className="text-3xl md:text-4xl font-bold mb-6 text-yellow-300">Let’s Work Together!</h2>
-      <p className="mb-8 text-lg pl-4 pr-4">
-        You can reach me by sending a message in one of the medias below.
+      <p className="mb-8 text-base pl-4 pr-4">
+        You can reach me by sending a message in one of the media below.
       </p>
 
       {/* Icons */}
@@ -45,7 +47,7 @@ export default function Contact() {
         </a>
       </div>
 
-      <p className="mt-10">© Otto Tuhkunen 2025</p>
+      <p className="mt-10">© Otto Tuhkunen {currentYear}</p>
     </section>
   );
 }

@@ -18,11 +18,38 @@ const education = [
   },
 ];
 
+const courses = [
+  {
+    name: 'CCNA: Introduction to Networks (ITN)',
+    provider: 'Cisco Networking Academy',
+  },
+  {
+    name: 'Agile ICT Project Management',
+    provider: 'Tampere University of Applied Sciences',
+  },
+  {
+    name: 'Frontend Development',
+    provider: 'Tampere University of Applied Sciences',
+  },
+  {
+    name: 'Backend Development',
+    provider: 'Tampere University of Applied Sciences',
+  },
+  {
+    name: 'Mobile Development',
+    provider: 'Tampere University of Applied Sciences',
+  },
+  {
+    name: 'Multidimensional Project Work',
+    provider: 'Tampere University of Applied Sciences',
+  },
+];
+
 export default function Education() {
   return (
     <section
       id="education"
-      className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-950 text-white"
+      className="min-h-screen py-20 bg-gradient-to-br from-gray-900 via-black to-gray-950 text-white"
     >
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-yellow-300">
@@ -49,6 +76,24 @@ export default function Education() {
                   <p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
                 </div>
               </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+      <div className="max-w-6xl mx-auto px-6">
+        <h3 className="text-2xl font-bold mt-14 mb-6 text-center">Key Courses</h3>
+        <div className="grid gap-6 md:grid-cols-3">
+          {courses.map((course, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="p-4 rounded-[50px] corner-squircle bg-white/5 border border-white/10 shadow-md hover:shadow-lg hover:scale-102 transition transform text-center"
+            >
+              <h4 className="text-lg font-semibold mb-1">{course.name}</h4>
+              <p className="text-sm text-gray-400">{course.provider}</p>
             </motion.div>
           ))}
         </div>

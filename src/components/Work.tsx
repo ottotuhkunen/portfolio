@@ -19,7 +19,7 @@ export default function Experience() {
   return (
     <section
       id="work"
-      className="py-24 bg-gradient-to-br from-teal-900 via-slate-900 to-black text-white relative overflow-hidden"
+      className="min-h-screen py-24 bg-gradient-to-br from-violet-950 to-slate-950 text-white relative overflow-hidden"
     >
       {/* floating background accents */}
       <motion.div
