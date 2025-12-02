@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
@@ -22,44 +22,55 @@ export default function Hero() {
         className="max-w-2xl"
       >
         <h1 className="text-4xl md:text-6xl font-extrabold mb-4">
-          Hi, I’m{" "}
-          <span className="bg-clip-text text-transparent text-yellow-300">
-            Otto
-          </span>
+          Hi, I’m <span className="bg-clip-text text-transparent text-yellow-300">Otto</span>
         </h1>
         <p className="text-lg text-gray-300 mb-6">
-          I am a passionate developer with a focus on modern web applications,
-          particularly those utilizing <b>React</b> and map-based tools like{" "}
-          <b>Leaflet</b> and <b>Mapbox</b>. I also have experience with{" "}
-          <b>Node.js</b> for backend development and handling SQL requests to{" "}
+          I am a passionate developer with a focus on modern web applications, particularly those
+          utilizing <b>React</b> and map-based tools like <b>Leaflet</b> and <b>Mapbox</b>. I also
+          have experience with <b>Node.js</b> for backend development and handling SQL requests to{' '}
           <b>PostgreSQL</b>. Many of my projects are published on Heroku.
         </p>
         <p className="text-lg text-gray-300 mb-6">
-          The aviation industry holds a special place in my heart, which is why
-          many of my non-profit projects are related to flight operations and
-          Air Traffic Services.
+          The aviation industry holds a special place in my heart, which is why many of my
+          non-profit projects are related to flight operations and Air Traffic Services.
         </p>
         <p className="text-lg text-gray-300 mb-10">
-          I have a strong interest in designing and developing modern User
-          Interfaces, which has led me to gain significant experience in
-          frontend development.
+          I have a strong interest in designing and developing modern User Interfaces, which has led
+          me to gain significant experience in frontend development.
         </p>
 
-        <div className="flex flex-wrap gap-6">
-          <a href="#projects" className="text-yellow-300 font-medium hover:underline underline-offset-4">
+        <div className="flex flex-wrap gap-6 gap-y-3">
+          <a
+            href="#projects"
+            className="text-yellow-300 font-medium hover:underline underline-offset-4"
+          >
             Projects
           </a>
-          <a href="#skills" className="text-yellow-300 font-medium hover:underline underline-offset-4">
+          <a
+            href="#skills"
+            className="text-yellow-300 font-medium hover:underline underline-offset-4"
+          >
             Skills
           </a>
-          <a href="#education" className="text-yellow-300 font-medium hover:underline underline-offset-4">
+          <a
+            href="#work"
+            className="text-yellow-300 font-medium hover:underline underline-offset-4"
+          >
+            Experience
+          </a>
+          <a
+            href="#education"
+            className="text-yellow-300 font-medium hover:underline underline-offset-4"
+          >
             Education
           </a>
-          <a href="#contact" className="text-yellow-300 font-medium hover:underline underline-offset-4">
+          <a
+            href="#contact"
+            className="text-yellow-300 font-medium hover:underline underline-offset-4"
+          >
             Contact
           </a>
         </div>
-
       </motion.div>
     </section>
   );
