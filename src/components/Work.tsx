@@ -18,7 +18,7 @@ const experience = [
     role: 'Security Officer',
     period: 'May 2022 – Aug 2022',
     location: 'Helsinki Airport, Finland',
-    tech: 'Stress resistance, teamwork',
+    tech: 'Teamwork, Stress Resistance',
     description:
       'Worked as a Security Officer responsible for conducting security checks for passengers, baggage, staff, and incoming shipments. Ensured compliance with aviation security standards.',
     image: '/images/airport.png',

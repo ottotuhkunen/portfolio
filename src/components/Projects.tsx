@@ -123,7 +123,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-950 text-white"
+      className="py-20 bg-gradient-to-r from-gray-900 via-black to-gray-950 text-white"
     >
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-yellow-300">
@@ -159,7 +159,7 @@ export default function Projects() {
                   </div>
                 </div>
               </div>
-              <div className="m-6 mb-8 mt-0 flex flex-wrap items-center gap-4">
+              <div className="m-6 mb-8 mt-0 flex flex-wrap items-center gap-4 select-none">
                 {project.live && (
                   <div className="w-22 h-7 relative custom-button before:bg-slate-900 before:outline-slate-400">
                     <button

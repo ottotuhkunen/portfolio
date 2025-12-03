@@ -28,6 +28,11 @@
     left: -0.5px;
     outline-width: 2px;
     outline-style: solid;
+    transition: 0.2s;
+}
+
+.custom-button:hover::before {
+    outline-color: rgb(202,213,226);
 }
 
 .custom-button > :first-child:active {
@@ -59,6 +64,82 @@
     transform: skewX(-10deg);
 }
 
+:root {
+    color-scheme: light dark;
+
+    --black: #000000;
+    --yellow: #ffdf20;
+    --lines: 7.5;
+}
+
+input[type="range"] {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    appearance: none;
+    margin: 0;
+    display: block;
+    background: transparent;
+    &::-webkit-slider-thumb {
+        appearance: none;
+        background: linear-gradient(
+                to bottom,
+                var(--yellow) 0 calc(50% - 1px),
+                var(--black) calc(50% - 2px) calc(50% + 2px),
+                var(--yellow) calc(50% + 1px) 100%
+        );
+        border-radius: 6px;
+        corner-shape: squircle;
+        width: 40px;
+        scale: 1.4 1;
+        height: 22px;
+        box-shadow: 0 0 4px var(--black);
+        background-color: var(--black) !important;
+    }
+    &::-moz-range-thumb {
+        appearance: none;
+        background: linear-gradient(
+                to bottom,
+                var(--yellow) 0 calc(50% - 1px),
+                var(--black) calc(50% - 2px) calc(50% + 2px),
+                var(--yellow) calc(50% + 1px) 100%
+        );
+        border-radius: 4px;
+        width: 40px;
+        scale: 1.4 1;
+        height: 18px;
+    }
+    &::-webkit-slider-runnable-track {
+        background: repeating-linear-gradient(
+                to bottom,
+                rgb(255 255 255 / 0.3) 0 2px,
+                transparent 2px calc((100% - 2px) / (var(--lines) - 1))
+        );
+    }
+    &::-webkit-slider-runnable-track {
+        background: repeating-linear-gradient(
+                to bottom,
+                rgb(255 255 255 / 0.3) 0 2px,
+                transparent 2px calc((100% - 2px) / (var(--lines) - 1))
+        );
+    }
+}
+
+.range-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.range-value {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background: repeating-linear-gradient(
+            to bottom,
+            var(--yellow) 0 2px,
+            transparent 2px calc((100% - 2px) / (var(--lines) - 1))
+    );
+}
 
 
 
