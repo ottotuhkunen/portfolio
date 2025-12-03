@@ -13,6 +13,17 @@ const experience = [
     image: '/images/taskhire.png',
     image2: '/images/taskhire2.png',
   },
+  {
+    company: 'Airpro Oy',
+    role: 'Security Officer',
+    period: 'May 2022 – Aug 2022',
+    location: 'Helsinki Airport, Finland',
+    tech: 'Stress resistance, teamwork',
+    description:
+      'Worked as a Security Officer responsible for conducting security checks for passengers, baggage, staff, and incoming shipments. Ensured compliance with aviation security standards.',
+    image: '/images/airport.png',
+    image2: '',
+  },
 ];
 
 export default function Experience() {
@@ -41,18 +52,27 @@ export default function Experience() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.2, duration: 0.6 }}
-            className="flex flex-col lg:flex-row gap-10 p-8 bg-white/5 border border-white/10 rounded-[50px] corner-squircle shadow-xl backdrop-blur-sm hover:shadow-2xl transition-all"
+            className="flex flex-col mb-8 lg:flex-row gap-10 p-8 bg-white/5 border border-white/10 rounded-[50px] corner-squircle shadow-xl backdrop-blur-sm hover:shadow-2xl transition-all"
           >
-            {/* screenshot */}
+            {idx === 0 && (
+              <div className="rounded-[12px] corner-squircle absolute -top-3 -left-2.5 rotate-[-14deg] px-4 py-1 bg-gradient-to-b from-yellow-300 to-yellow-400 text-black font-bold text-sm uppercase rounded shadow-md z-20">
+                New
+              </div>
+            )}
+
+            {/* image */}
             <div className="flex gap-2 justify-center lg:justify-start">
-              {[item.image, item.image2].map((img, i) => (
+              {[item.image, item.image2].filter(Boolean).map((img, i, arr) => (
                 <motion.div
                   key={i}
                   initial={{ rotate: -2, opacity: 0 }}
                   whileInView={{ rotate: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className="w-40 h-auto rounded-[1.4rem] p-1 bg-white border-[4px] select-none border-black shadow-xl overflow-hidden"
+                  className={`
+                    rounded-[1.4rem] bg-white border-black shadow-xl overflow-hidden
+                    ${arr.length === 1 ? 'w-80 h-auto border border-gray-700' : 'w-40 h-auto p-1 border-[4px]'}
+                  `}
                 >
                   <img src={img} alt="mobile screenshot" className="w-full h-full object-cover" />
                 </motion.div>

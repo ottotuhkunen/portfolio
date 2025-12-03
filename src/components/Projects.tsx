@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import '../button.css';
 
 const projects = [
   {
@@ -108,6 +109,17 @@ const projects = [
 ];
 
 export default function Projects() {
+  const handleLinkClick = (e: React.MouseEvent<HTMLButtonElement>, url: string) => {
+    e.preventDefault();
+
+    const btn = e.currentTarget.querySelector('div:first-child');
+    btn?.classList.add('active');
+
+    setTimeout(() => {
+      window.open(url, '_blank');
+    }, 200);
+  };
+
   return (
     <section
       id="projects"
@@ -126,68 +138,52 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="rounded-[50px] corner-squircle overflow-hidden shadow-lg bg-white/5 backdrop-blur-md border border-white/10 hover:scale-102 transition"
+              className="flex flex-col justify-between rounded-[50px] corner-squircle overflow-hidden shadow-lg bg-white/5 backdrop-blur-md border border-white/10 hover:scale-102 transition"
             >
-              <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
-              <div className="p-6 flex flex-col gap-4">
-                <h3 className="text-xl font-semibold">{project.title}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map(t => (
-                    <span
-                      key={t}
-                      className="px-3 py-1 rounded-full text-xs font-medium bg-white/5 border border-white/20 text-gray-200"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-                <div>
-                  <p className="text-sm text-gray-300">{project.description}</p>
-                </div>
-                <div className="mt-4 flex flex-wrap items-center gap-2">
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-blue-800 border border-white/10 text-xs font-semibold hover:bg-blue-900 transition"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
+              <div>
+                <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+                <div className="p-6 flex flex-col gap-4">
+                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map(t => (
+                      <span
+                        key={t}
+                        className="px-3 py-1 rounded-full text-xs font-medium bg-white/5 border border-white/20 text-gray-200"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M14 3h7v7m0 0L10 21l-7-7 11-11z"
-                        />
-                      </svg>
-                      Live
-                    </a>
-                  )}
-                  {project.repo && (
-                    <a
-                      href={project.repo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-blue-800 border border-white/10 text-xs font-semibold hover:bg-blue-900 transition"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.29 3.438 9.773 8.205 11.365.6.111.82-.261.82-.58 0-.287-.01-1.046-.016-2.054-3.338.727-4.042-1.608-4.042-1.608-.546-1.387-1.333-1.756-1.333-1.756-1.09-.746.083-.73.083-.73 1.205.084 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.76-1.605-2.665-.304-5.467-1.332-5.467-5.931 0-1.31.467-2.381 1.235-3.221-.123-.303-.536-1.523.117-3.176 0 0 1.008-.323 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.553 3.295-1.23 3.295-1.23.655 1.653.242 2.873.119 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.807 5.625-5.48 5.921.43.372.813 1.102.813 2.222 0 1.604-.015 2.896-.015 3.289 0 .321.216.694.825.576C20.565 22.27 24 17.788 24 12.5 24 5.87 18.63.5 12 .5z" />
-                      </svg>
-                      GitHub
-                    </a>
-                  )}
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-300">{project.description}</p>
+                  </div>
                 </div>
+              </div>
+              <div className="m-6 mb-8 mt-0 flex flex-wrap items-center gap-4">
+                {project.live && (
+                  <div className="w-22 h-7 relative custom-button before:bg-slate-900 before:outline-slate-400">
+                    <button
+                      type="button"
+                      onClick={e => handleLinkClick(e, project.live)}
+                      className="cursor-pointer w-full h-full bg-slate-400 text-black text-xs font-bold flex items-center justify-center rounded-full border-2 border-black overflow-hidden"
+                    >
+                      <span>Live</span>
+                    </button>
+                    <div className="pseudo-elements absolute top-[8px] w-full h-full z-[-1] bg-slate-700 text-base flex items-center justify-center rounded-full border-2 border-black before:bg-black after:bg-black"></div>
+                  </div>
+                )}
+                {project.repo && (
+                  <div className="w-22 h-7 relative custom-button before:bg-slate-900 before:outline-slate-400">
+                    <button
+                      type="button"
+                      onClick={e => handleLinkClick(e, project.repo)}
+                      className="cursor-pointer w-full h-full bg-slate-400 text-black text-xs font-bold flex items-center justify-center rounded-full border-2 border-black overflow-hidden"
+                    >
+                      <span>GitHub</span>
+                    </button>
+                    <div className="pseudo-elements absolute top-[8px] w-full h-full z-[-1] bg-slate-700 text-base flex items-center justify-center rounded-full border-2 border-black before:bg-black after:bg-black"></div>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}

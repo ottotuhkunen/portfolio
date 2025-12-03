@@ -33,7 +33,10 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-blue-950 to-black text-white">
+    <section
+      id="skills"
+      className="py-20 bg-gradient-to-br from-blue-950 to-black text-white select-none"
+    >
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-yellow-300">S k i l l s</h2>
         <h3 className="text-2xl font-bold mt-10 mb-6">Programming</h3>
