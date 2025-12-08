@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import '../button.css';
+import '../styles/button.css';
 
 const projects = [
   {
@@ -100,11 +100,13 @@ const projects = [
     repo: 'https://github.com/ottotuhkunen/rcr-maker',
   },
   {
-    title: 'Swift Prototype App',
-    image: 'images/swift.png',
+    title: 'Cold Temperature Error Correction Calculator',
+    image: 'images/temp_corr.png',
     description:
-      'This is a prototype application made with Swift for iOS devices. The app contains a connection to backend and possibility to add, change or remove data. The user interface is designed to be plain, modern and accessible.',
-    tech: ['Swift', 'iOS', 'SQL'],
+      'This app helps virtual Air Traffic Controllers in Finland to calculate Cold Temperature Error Corrections to Assigned Altitudes for obstacle clearance separation. Calculations are based on the official ICAO formula.',
+    tech: ['React', 'TailwindCSS'],
+    live: 'https://tempcorr.lusep.fi/',
+    repo: 'https://github.com/ottotuhkunen/temp-corr',
   },
 ];
 

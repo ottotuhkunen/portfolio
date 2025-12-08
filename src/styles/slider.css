@@ -1,69 +1,3 @@
-
-.pseudo-elements::before {
-    content: '';
-    width: 2px;
-    height: 9px;
-    position: absolute;
-    bottom: 0;
-    left: 15%;
-}
-
-.pseudo-elements::after {
-    content: '';
-    width: 2px;
-    height: 9px;
-    position: absolute;
-    bottom: 0;
-    right: 15%;
-}
-
-.custom-button::before {
-    content: '';
-    height: 100%;
-    border-radius: 50px;
-    position: absolute;
-    top: 10px;
-    z-index: -1;
-    width: calc(100% + 1px);
-    left: -0.5px;
-    outline-width: 2px;
-    outline-style: solid;
-    transition: 0.2s;
-}
-
-.custom-button:hover::before {
-    outline-color: rgb(202,213,226);
-}
-
-.custom-button > :first-child:active {
-    transform: translateY(8px);
-}
-
-.custom-button > :first-child {
-    transition: 0.2s;
-    position: relative;
-
-}
-
-.custom-button > :first-child::before {
-    content: '';
-    width: 15px;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.1);
-    transform: skewX(30deg);
-    transition: 0.25s;
-    position: absolute;
-    left: -16px;
-}
-
-.custom-button > :first-child:active::before {
-    left: calc(100% + 2px);
-}
-
-.custom-button span {
-    transform: skewX(-10deg);
-}
-
 :root {
     color-scheme: light dark;
 
@@ -133,14 +67,9 @@ input[type="range"] {
     position: absolute;
     inset: 0;
     pointer-events: none;
-    z-index: -1;
     background: repeating-linear-gradient(
             to bottom,
             var(--yellow) 0 2px,
             transparent 2px calc((100% - 2px) / (var(--lines) - 1))
     );
 }
-
-
-
-
