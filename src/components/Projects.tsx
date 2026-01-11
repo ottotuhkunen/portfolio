@@ -12,6 +12,14 @@ const projects = [
     repo: 'https://github.com/ottotuhkunen/virtual-lara-airspace-data/tree/main',
   },
   {
+    title: 'Community Homepage',
+    image: 'images/vfiaf.png',
+    description:
+      'This is a homepage for a Flight Simulator community made with React and Node.JS Express. This project utilizes TailwindCSS, modern workflows, API calls, SQL, and a well-structured workspace.',
+    tech: ['React', 'Vite', 'TailwindCSS', 'Node.js', 'SQL'],
+    live: 'https://virtualfiaf.org/',
+  },
+  {
     title: 'Airport Weather Display',
     image: 'images/awos.png',
     description:
@@ -28,6 +36,15 @@ const projects = [
     tech: ['React', 'Mapbox', 'GeoJSON'],
     live: 'https://ottotuhkunen.github.io/sailing-app/',
     repo: 'https://github.com/ottotuhkunen/sailing-app',
+  },
+  {
+    title: 'Community Dashboard',
+    image: 'images/dashboard.png',
+    description:
+      'Modern dashboard and Flight Operations tool. Frontend developed with React and TailwindCSS. Backend developed with Node.js and Express JS. Database established in PostgreSQL. The frontend is running on Vercel.',
+    tech: ['React', 'TailwindCSS', 'SQL', 'OAuth2', 'Express', 'Vite'],
+    live: 'https://dashboard.virtualfiaf.org/',
+    repo: '',
   },
   {
     title: 'General Information Display',
